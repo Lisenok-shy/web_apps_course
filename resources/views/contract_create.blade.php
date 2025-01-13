@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-	<head>
-		<title>605-41mE.A.</title>
-        <style>.invalid {color:red;}</style>
-	</head>
-	<body>
+@extends('basado')
+@section('content')
     <h2>Создание контракта</h2>
     <form method = "post" action={{url("contract")}}>
         @csrf
@@ -38,7 +33,4 @@
         <br>
         <input type='submit' value='Отправить на согласование'/>
     </form>
-</body>
-</html>
-</script>
-
+@endsection

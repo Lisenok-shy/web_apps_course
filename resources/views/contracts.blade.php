@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<meta charset='utf-8'>
-<head>
-		<title>605-41mE.A.</title>
-        <style>.invalid {color:red;}</style>
-	</head>
-	<body>
-    <table>
+@extends('basado')
+@section('content')
+<table>
     <thead>
         <td>id</td>
         <td>номер</td>
@@ -28,11 +23,10 @@
             <td>{{$contract->date_end}}</td>
             <td>{{$contract->confirmed}}</td>
             <td>
-                <a href = "{{url('contract/delete/'.$contract->id)}}">Удалить</a>
-                <a href = "{{url('contract/edit/'.$contract->id)}}">Подтвердить</a>
+                <a href="{{url('contract/delete/' . $contract->id)}}">Удалить</a>
+                <a href="{{url('contract/edit/' . $contract->id)}}">Подтвердить</a>
             </td>
         </tr>
     @endforeach
-    </table>
-</body>
-</html>
+</table>
+@endsection

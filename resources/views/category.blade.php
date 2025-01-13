@@ -1,9 +1,5 @@
-<!DOCTYPE html>
-<meta charset='utf-8'>
-	<head>
-		<title>605-41mE.A.</title>
-	</head>
-	<body>
+@extends('basado')
+@section('content')
     <h2>{{$category ? "Категория: ".$category->category : "venom"}}</h2>
     @if($category)
     <table>
@@ -21,5 +17,4 @@
     @endforeach
     </table>
     @endif
-</body>
-</html>
+@endsection

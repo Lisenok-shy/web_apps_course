@@ -1,6 +1,7 @@
-<body>
-    <h2>Список домиков</h2>
-    <table>
+@extends('basado')
+@section('content')
+<h2>Список домиков</h2>
+<table>
     <thead>
         <td>id</td>
         <td>Название</td>
@@ -13,6 +14,6 @@
             <td>{{$house->area}}</td>
         </tr>
     @endforeach
-    </table>
-    {{ $houses->links() }}
-</body>
+</table>
+{{ $houses->links() }}
+@endsection
