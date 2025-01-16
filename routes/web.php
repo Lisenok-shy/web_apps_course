@@ -51,3 +51,7 @@ Route::get('/logout', [LoginController::class, 'logout'])->middleware('auth');;
 Route::post('/auth', [LoginController::class, 'authenticate']);
 
 Route::get('/error', function() {return view('error',['message'=>session('message')]);});
+
+Route::get('/screamer', function () {
+    return view('domik');
+});

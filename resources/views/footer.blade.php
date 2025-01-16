@@ -20,5 +20,6 @@
             <use xlink:href="#facebook"></use>
           </svg></a></li>
     </ul>
+    <a href="screamer" class="btn btn-danger" style="width:100px">Не нажимай</a>
   </footer>
 </div>
