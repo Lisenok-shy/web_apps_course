@@ -16,6 +16,7 @@ class HouseImg extends Model
      *
      * @var list<string>
      */
+     protected $fillable = ['house_id','img'];
     public function house(): BelongsTo
     {
         return $this->belongsTo(related:House::class);

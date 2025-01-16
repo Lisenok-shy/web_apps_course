@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Paginator::defaultView('pagination::default');
+        Paginator::defaultView('pagination::bootstrap-5');
 
         Gate::define('confirm_contract',function(User $user)
         {

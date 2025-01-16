@@ -44,12 +44,13 @@ return new class extends Migration
             $table->timestamps();
         });
         // Таблица  Houseimg
-        Schema::create('houseimgs', function (Blueprint $table) {
+        Schema::create('house_imgs', function (Blueprint $table) {
           $table->id();
-          $table->binary('img')->nullable();
+          $table->string('img')->nullable();
           $table->unsignedBigInteger('house_id');
           $table->foreign('house_id')->references('id')->on('houses');
           $table->timestamps();
+          $table->unique(['house_id','img']);
         });
         // Таблица  Categories
         Schema::create('categories', function (Blueprint $table) {
@@ -65,6 +66,7 @@ return new class extends Migration
             $table->foreign('house_id')->references('id')->on('houses');
             $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
+            $table->unique(['house_id','category_id']);
         });
 
     }
@@ -74,7 +76,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('houseimgs');
+        Schema::dropIfExists('house_imgs');
         Schema::dropIfExists('bills');
         Schema::dropIfExists('contracts');
         Schema::dropIfExists('category_house');

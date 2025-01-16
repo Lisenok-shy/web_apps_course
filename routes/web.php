@@ -16,9 +16,19 @@ Route::get('/hello', function () {
 //middleware('auth')
 Route::get('/house', [HouseController::class,'index'])->middleware('auth');
 
+Route::get('/house/create', [HouseController::class,'create'])->middleware('auth');;
+
+Route::post('/house', [HouseController::class, 'store'])->middleware('auth');;
+
 Route::get('/house/{id}', [HouseController::class,'show'])->middleware('auth');;
 
+Route::get('/house/edit/{id}', [HouseController::class,'edit'])->middleware('auth');;
+
+Route::post('/house/{id}', [HouseController::class,'update'])->middleware('auth');;
+
 Route::get('/category', [CategoryController::class,'index'])->middleware('auth');;
+
+Route::post('/category/{id}', [CategoryController::class,'store'])->middleware('auth');;
 
 Route::get('/category/{id}', [CategoryController::class,'show'])->middleware('auth');;
 

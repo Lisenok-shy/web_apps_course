@@ -16,7 +16,7 @@ class ContractController extends Controller
     public function index()
     {
         return view('contracts',[
-            'contracts'=>Contract::all()
+            'contracts'=>Contract::all()->sortBy("id")
         ]); 
     }
 
@@ -104,7 +104,7 @@ class ContractController extends Controller
     public function destroy(string $id)
     {
         if (!Gate::allows('delete_contract',Contract::all()->where("id",$id)->first())){
-            return redirect('/error')->with('message','У вас здесь нет власти');
+            return redirect('/contract')->withErrors(['contract'=>'ошибка']);
         }
         $contract = Contract::all()->where("id",$id)->first();
         $bills = $contract->bills();

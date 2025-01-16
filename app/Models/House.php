@@ -12,7 +12,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class House extends Model
 {
     use HasFactory;
-  
+    protected $fillable = ['address','area','price'];
+
     public function houseimgs(): HasMany
     {
         return $this->hasMany(related:HouseImg::class);
