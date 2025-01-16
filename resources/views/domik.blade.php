@@ -21,7 +21,9 @@
 
 <body style="background-color:black;">
     <div class="parent container d-flex justify-content-center align-items-center h-100">
+        <h1>БИБКИ</h1>
         <img src="https://img-webcalypt.ru/uploads/admin/images/meme-templates/CFtae5k8dkQ4GmKnWgzN5KD7j0Tn2Y2j.jpeg"
             style="width:900px"></img>
+        <h1>БИБКИ</h1>
     </div>
 </body>

@@ -110,6 +110,6 @@ class ContractController extends Controller
         $bills = $contract->bills();
         $bills -> delete();
         $contract -> delete();
-        return redirect("/contract");
+        return redirect("/contract")->withErrors(["delete"=>"Запись удалена"]);
     }
 }

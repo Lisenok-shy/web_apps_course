@@ -29,4 +29,9 @@
             {{$message}}
     </div>
     @enderror
+    @error('delete')
+    <div class="alert alert-warning " role="alert">
+            {{$message}}
+    </div>
+    @enderror
 </div>
